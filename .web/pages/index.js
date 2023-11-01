@@ -93,16 +93,16 @@ export default function Component() {
   <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "#ffffff", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #9ecadb"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
-  <Container>
-  <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
-  {`ONESTARGRAM`}
-</Text>
+  <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
+  <Image src="onestar.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
 </Container>
 </VStack>
   <VStack>
   <Container sx={{"height": "10px"}}/>
-  <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
-  <Image src="insta.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
+  <Container>
+  <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
+  {`ONESTARGRAM`}
+</Text>
 </Container>
   <Container sx={{"height": "120px"}}/>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>

@@ -28,6 +28,22 @@ def index():
         pc.vstack(
             pc.container(height= '75px'),
             pc.container(
+                pc.image(
+                    src="onestar.ico",  # 이미지 파일의 경로를 지정합니다.
+                    alt="ONE STAR",  # 이미지의 대체 텍스트를 지정합니다.
+                    style={"width": "100px", "height": "100px"},  # 이미지 크기를 조정합니다.
+                ),
+                style={
+                    "width": "100%",  # 부모 컨테이너의 100% 너비 설정
+                    "display": "flex",
+                    "flex-direction": "column",  # 내부 컨테이너의 내용을 세로로 정렬
+                    "align-items": "center",  # 내부 컨테이너의 내용을 수직으로 가운데 정렬
+                    },
+                ),
+        ),
+        pc.vstack(
+            pc.container(height= '10px'),
+            pc.container(
                 pc.text(
                     'ONESTARGRAM',
                     style= {
@@ -42,22 +58,6 @@ def index():
                     center_content =True,
                 ),
             ),
-        ),
-        pc.vstack(
-            pc.container(height= '10px'),
-            pc.container(
-                pc.image(
-                    src="insta.ico",  # 이미지 파일의 경로를 지정합니다.
-                    alt="ONE STAR",  # 이미지의 대체 텍스트를 지정합니다.
-                    style={"width": "100px", "height": "100px"},  # 이미지 크기를 조정합니다.
-                ),
-                style={
-                    "width": "100%",  # 부모 컨테이너의 100% 너비 설정
-                    "display": "flex",
-                    "flex-direction": "column",  # 내부 컨테이너의 내용을 세로로 정렬
-                    "align-items": "center",  # 내부 컨테이너의 내용을 수직으로 가운데 정렬
-                    },
-                ),
             pc.container(height='120px'),
             get_input_field('Email','Email',''),
             get_input_field('Lock','Password','password'),
