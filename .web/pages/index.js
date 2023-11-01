@@ -94,7 +94,7 @@ export default function Component() {
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
-  <Image src="onestar.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
+  <Image src="onestar1.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
 </Container>
 </VStack>
   <VStack>
