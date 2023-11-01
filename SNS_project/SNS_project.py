@@ -29,7 +29,7 @@ def index():
             pc.container(height= '75px'),
             pc.container(
                 pc.text(
-                    'INSTAKILOGRAM',
+                    'ONESTARGRAM',
                     style= {
                         "fontSize": "25px",
                         "fontWeight": "bolder",
@@ -46,14 +46,10 @@ def index():
         pc.vstack(
             pc.container(height= '10px'),
             pc.container(
-                pc.text(
-                    'Please log in to access INSTAGRAM.',
-                    style= {
-                        "fontSize": "15px",
-                        "letterSpacing": "2px",
-                        "color": 'black'
-                    },
-                    center_content =True,
+               pc.image(
+                    src='C:\Users\chank\OneDrive\바탕 화면\project\SNS-project\images.jpg',
+                    alt='one star',
+                    center_content=True,
                 ),
             ),
             pc.container(height='120px'),
@@ -78,19 +74,19 @@ def index():
                     pc.text(
                         '회원가입',
                         style = {
-                            'color':'black',
+                            'color':'white',
                             'fontSize':'13px',
                             'weight':'bolder',
                         },
                     ),
-                    color_scheme='Bright Blue',
+                    color_scheme='blue',
                 ),
                 pc.container(width='130px'),
                 pc.button(
                     pc.text(
                         '로그인',
                         style={
-                            'color':'black',
+                            'color':'white',
                             'fontSize':'13px',
                             'weight':'bolder',
                             'textAlign':'end',

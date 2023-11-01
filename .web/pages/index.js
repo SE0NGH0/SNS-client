@@ -95,15 +95,15 @@ export default function Component() {
   <Container sx={{"height": "75px"}}/>
   <Container>
   <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
-  {`INSTAKILOGRAM`}
+  {`ONESTARGRAM`}
 </Text>
 </Container>
 </VStack>
   <VStack>
   <Container sx={{"height": "10px"}}/>
   <Container>
-  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true}}>
-  {`Please log in to access INSTAGRAM.`}
+  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true, "unsafe": true}}>
+  {`hello`}
 </Text>
 </Container>
   <Container sx={{"height": "120px"}}/>
@@ -127,13 +127,13 @@ export default function Component() {
   <Container sx={{"height": "55px"}}/>
   <HStack>
   <Button colorScheme="blue">
-  <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder"}}>
+  <Text sx={{"color": "white", "fontSize": "13px", "weight": "bolder"}}>
   {`회원가입`}
 </Text>
 </Button>
   <Container sx={{"width": "130px"}}/>
   <Button colorScheme="blue">
-  <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
+  <Text sx={{"color": "white", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
   {`로그인`}
 </Text>
 </Button>
