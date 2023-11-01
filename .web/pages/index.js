@@ -95,7 +95,7 @@ export default function Component() {
   <Container sx={{"height": "75px"}}/>
   <Container>
   <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
-  {`INSTAGRAM`}
+  {`INSTAKILOGRAM`}
 </Text>
 </Container>
 </VStack>

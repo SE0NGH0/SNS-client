@@ -29,7 +29,7 @@ def index():
             pc.container(height= '75px'),
             pc.container(
                 pc.text(
-                    'INSTAGRAM',
+                    'INSTAKILOGRAM',
                     style= {
                         "fontSize": "25px",
                         "fontWeight": "bolder",
