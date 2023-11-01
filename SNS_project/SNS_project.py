@@ -5,7 +5,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         pc.hstack(
             pc.icon(
                 tag=icon,
-                color='blue',
+                color='black',
                 fontSize='12px',
             ),
             pc.input(
@@ -46,19 +46,21 @@ def index():
         pc.vstack(
             pc.container(height= '10px'),
             pc.container(
-                pc.text(
-                    'Please log in to access',
-                    style= {
-                        "fontSize": "15px",
-                        "letterSpacing": "2px",
-                        "color": 'black'
-                    },
-                    center_content =True,
+                pc.image(
+                    src="favicon.ico",  # 이미지 파일의 경로를 지정합니다.
+                    alt="ONE STAR",  # 이미지의 대체 텍스트를 지정합니다.
+                    style={"width": "100px", "height": "100px"},  # 이미지 크기를 조정합니다.
                 ),
-            ),
+                style={
+                    "width": "100%",  # 부모 컨테이너의 100% 너비 설정
+                    "display": "flex",
+                    "flex-direction": "column",  # 내부 컨테이너의 내용을 세로로 정렬
+                    "align-items": "center",  # 내부 컨테이너의 내용을 수직으로 가운데 정렬
+                    },
+                ),
             pc.container(height='120px'),
-            get_input_field('EmailIcon','Email',''),
-            get_input_field('LockIcon','PassWord','password'),
+            get_input_field('Email','Email',''),
+            get_input_field('Lock','Password','password'),
             pc.button(
                 pc.text(
                     '비밀번호를 잊어버리셨나요?',

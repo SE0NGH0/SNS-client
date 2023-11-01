@@ -2,7 +2,7 @@ import { Fragment, useEffect, useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { connect, E, getRefValue, isTrue, preventDefault, processEvent, refs, set_val, uploadFiles } from "/utils/state"
 import "focus-visible/dist/focus-visible"
-import { Box, Button, Container, HStack, Input, Text, useColorMode, VStack } from "@chakra-ui/react"
+import { Box, Button, Container, HStack, Image, Input, Text, useColorMode, VStack } from "@chakra-ui/react"
 import { EmailIcon, LockIcon } from "@chakra-ui/icons"
 import NextHead from "next/head"
 
@@ -100,23 +100,21 @@ export default function Component() {
 </Container>
 </VStack>
   <VStack>
-  <Container sx={{"height": "5px"}}/>
-  <Container>
-  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true}}>
-  {`ONE STAR`}
-</Text>
+  <Container sx={{"height": "10px"}}/>
+  <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
+  <Image src="favicon.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
 </Container>
   <Container sx={{"height": "120px"}}/>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
-  <EmailIcon sx={{"color": "green", "fontSize": "12px"}}/>
+  <EmailIcon sx={{"color": "black", "fontSize": "12px"}}/>
   <Input focusBorderColor="black" placeholder="Email" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": ""}} type="text"/>
 </HStack>
 </Container>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
-  <LockIcon sx={{"color": "green", "fontSize": "12px"}}/>
-  <Input focusBorderColor="black" placeholder="PassWord" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
+  <LockIcon sx={{"color": "black", "fontSize": "12px"}}/>
+  <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
 </HStack>
 </Container>
   <Button sx={{"float": "right"}}>
