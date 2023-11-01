@@ -47,7 +47,7 @@ def index():
             pc.container(height= '10px'),
             pc.container(
                 pc.image(
-                    src="favicon.ico",  # 이미지 파일의 경로를 지정합니다.
+                    src="star.ico",  # 이미지 파일의 경로를 지정합니다.
                     alt="ONE STAR",  # 이미지의 대체 텍스트를 지정합니다.
                     style={"width": "100px", "height": "100px"},  # 이미지 크기를 조정합니다.
                 ),
