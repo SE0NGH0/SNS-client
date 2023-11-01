@@ -100,10 +100,10 @@ export default function Component() {
 </Container>
 </VStack>
   <VStack>
-  <Container sx={{"height": "10px"}}/>
+  <Container sx={{"height": "5px"}}/>
   <Container>
-  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true, "unsafe": true}}>
-  {`hello`}
+  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true}}>
+  {`ONE STAR`}
 </Text>
 </Container>
   <Container sx={{"height": "120px"}}/>
@@ -120,7 +120,7 @@ export default function Component() {
 </HStack>
 </Container>
   <Button sx={{"float": "right"}}>
-  <Text sx={{"fontSize": "12px", "color": "blue", "textAlign": "end"}}>
+  <Text sx={{"fontSize": "12px", "color": "black", "textAlign": "end"}}>
   {`비밀번호를 잊어버리셨나요?`}
 </Text>
 </Button>

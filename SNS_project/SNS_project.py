@@ -5,7 +5,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         pc.hstack(
             pc.icon(
                 tag=icon,
-                color='green',
+                color='blue',
                 fontSize='12px',
             ),
             pc.input(
@@ -46,21 +46,25 @@ def index():
         pc.vstack(
             pc.container(height= '10px'),
             pc.container(
-               pc.image(
-                    src='C:\Users\chank\OneDrive\바탕 화면\project\SNS-project\images.jpg',
-                    alt='one star',
-                    center_content=True,
+                pc.text(
+                    'Please log in to access',
+                    style= {
+                        "fontSize": "15px",
+                        "letterSpacing": "2px",
+                        "color": 'black'
+                    },
+                    center_content =True,
                 ),
             ),
             pc.container(height='120px'),
-            get_input_field('Email','Email',''),
-            get_input_field('Lock','PassWord','password'),
+            get_input_field('EmailIcon','Email',''),
+            get_input_field('LockIcon','PassWord','password'),
             pc.button(
                 pc.text(
                     '비밀번호를 잊어버리셨나요?',
                     style = {
                         'fontSize':'12px',
-                        'color':'blue',
+                        'color':'black',
                         'textAlign':'end',
                     },
                 ),
