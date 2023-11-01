@@ -83,7 +83,7 @@ def index():
                             'weight':'bolder',
                         },
                     ),
-                    color_scheme='blue',
+                    color_scheme='Bright Blue',
                 ),
                 pc.container(width='130px'),
                 pc.button(
