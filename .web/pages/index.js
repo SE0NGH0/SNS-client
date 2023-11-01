@@ -102,7 +102,7 @@ export default function Component() {
   <VStack>
   <Container sx={{"height": "10px"}}/>
   <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
-  <Image src="star.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
+  <Image src="insta.ico" sx={{"width": "100px", "height": "100px", "alt": "ONE STAR"}}/>
 </Container>
   <Container sx={{"height": "120px"}}/>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
