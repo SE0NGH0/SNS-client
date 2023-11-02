@@ -90,7 +90,7 @@ export default function Component() {
   return (
   <Fragment><Fragment>
   <Container centerContent={true} sx={{"justifyContent": "center", "maxWidth": "auto", "height": "100vh", "bg": "linear-gradient(to bottom, #663399, #FFA500)"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255, 255, 255, 0.5)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #9ecadb"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255, 255, 255, 0.5)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #000000"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
@@ -117,21 +117,21 @@ export default function Component() {
   <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
 </HStack>
 </Container>
-  <Button sx={{"float": "right"}}>
+  <Button colorScheme="black" sx={{"float": "right"}}>
   <Text sx={{"fontSize": "12px", "color": "black", "textAlign": "end"}}>
   {`비밀번호를 잊어버리셨나요?`}
 </Text>
 </Button>
   <Container sx={{"height": "55px"}}/>
   <HStack>
-  <Button colorScheme="blue">
-  <Text sx={{"color": "white", "fontSize": "13px", "weight": "bolder"}}>
+  <Button colorScheme="black">
+  <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder"}}>
   {`회원가입`}
 </Text>
 </Button>
   <Container sx={{"width": "130px"}}/>
-  <Button colorScheme="blue">
-  <Text sx={{"color": "white", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
+  <Button colorScheme="black">
+  <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
   {`로그인`}
 </Text>
 </Button>

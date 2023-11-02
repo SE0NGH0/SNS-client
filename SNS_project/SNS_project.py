@@ -73,6 +73,7 @@ def index():
                 style = {
                     'float':'right',
                 },
+                color_scheme='black',
             ),
             pc.container(height='55px'),
             pc.hstack(
@@ -80,25 +81,25 @@ def index():
                     pc.text(
                         '회원가입',
                         style = {
-                            'color':'white',
+                            'color':'black',
                             'fontSize':'13px',
                             'weight':'bolder',
                         },
                     ),
-                    color_scheme='blue',
+                    color_scheme='black',
                 ),
                 pc.container(width='130px'),
                 pc.button(
                     pc.text(
                         '로그인',
                         style={
-                            'color':'white',
+                            'color':'black',
                             'fontSize':'13px',
                             'weight':'bolder',
                             'textAlign':'end',
                         },
                     ),
-                    color_scheme='blue',
+                    color_scheme='black',
                 )
             ),
         ),
@@ -108,7 +109,7 @@ def index():
         center_content=True,
         bg = 'rgba(255, 255, 255, 0.5)',
         borderRadius='15px',
-        boxShadow='-11px 11px 50px #9ecadb'
+        boxShadow='-11px 11px 50px #000000'
     )
 
     _main = pc.container(
