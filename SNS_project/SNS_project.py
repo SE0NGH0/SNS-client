@@ -17,7 +17,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
                 type=_type,
             ),
         ),
-        borderBottom='0.3px solid green',
+        borderBottom='0.3px solid purple',
         width='300px',
         height='43px',
     )
@@ -51,7 +51,7 @@ def index():
                         "fontWeight": "bolder",
                         "letterSpacing": "5px",
                         "fontFamily": "Georgia, Serif",
-                        "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)",
+                        "background": "-webkit-linear-gradient(-45deg, #663399, #fa0000)",
                         "-webkit-background-clip": "text",
                         "color": "transparent",
                     },
@@ -106,7 +106,7 @@ def index():
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = '#ffffff',
+        bg = 'rgba(255, 255, 255, 0.5)',
         borderRadius='15px',
         boxShadow='-11px 11px 50px #9ecadb'
     )
@@ -118,7 +118,7 @@ def index():
         maxWidth='auto',
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
-        bg='#000000', #배경 색상
+        bg='linear-gradient(to bottom, #663399, #FFA500)', #배경 색상
     )
     return _main
 

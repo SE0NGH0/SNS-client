@@ -89,8 +89,8 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"justifyContent": "center", "maxWidth": "auto", "height": "100vh", "bg": "#000000"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "#ffffff", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #9ecadb"}}>
+  <Container centerContent={true} sx={{"justifyContent": "center", "maxWidth": "auto", "height": "100vh", "bg": "linear-gradient(to bottom, #663399, #FFA500)"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255, 255, 255, 0.5)", "borderRadius": "15px", "boxShadow": "-11px 11px 50px #9ecadb"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container sx={{"width": "100%", "display": "flex", "flex-direction": "column", "align-items": "center"}}>
@@ -100,18 +100,18 @@ export default function Component() {
   <VStack>
   <Container sx={{"height": "10px"}}/>
   <Container>
-  <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #fa0000, #f0b46c)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
+  <Text sx={{"fontSize": "25px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Georgia, Serif", "background": "-webkit-linear-gradient(-45deg, #663399, #fa0000)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
   {`ONESTARGRAM`}
 </Text>
 </Container>
   <Container sx={{"height": "120px"}}/>
-  <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
+  <Container sx={{"borderBottom": "0.3px solid purple", "width": "300px", "height": "43px"}}>
   <HStack>
   <EmailIcon sx={{"color": "black", "fontSize": "12px"}}/>
   <Input focusBorderColor="black" placeholder="Email" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": ""}} type="text"/>
 </HStack>
 </Container>
-  <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
+  <Container sx={{"borderBottom": "0.3px solid purple", "width": "300px", "height": "43px"}}>
   <HStack>
   <LockIcon sx={{"color": "black", "fontSize": "12px"}}/>
   <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
