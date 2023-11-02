@@ -109,7 +109,7 @@ def index():
         center_content=True,
         bg = 'rgba(255, 255, 255, 0.5)',
         borderRadius='15px',
-        boxShadow='-11px 11px 50px #000000'
+        boxShadow='-11px 11px 50px #000000',
     )
 
     _main = pc.container(
