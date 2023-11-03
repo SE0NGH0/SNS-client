@@ -90,7 +90,7 @@ export default function Component() {
   return (
   <Fragment><Fragment>
   <Container centerContent={true} sx={{"background-image": "url('mosaic.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.8)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.85)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
@@ -100,9 +100,9 @@ export default function Component() {
 </Container>
 </VStack>
   <VStack>
-  <Container sx={{"height": "10px"}}/>
+  <Container sx={{"height": "5px"}}/>
   <Container>
-  <Text sx={{"fontSize": "15px", "letterSpacing": "2px", "color": "black", "centerContent": true}}>
+  <Text sx={{"fontSize": "15px", "letterSpacing": "3.5px", "color": "black", "centerContent": true}}>
   {`Create a picture with your story!`}
 </Text>
 </Container>
@@ -123,20 +123,27 @@ export default function Component() {
 </HStack>
 </Container>
   <Button colorScheme="black" sx={{"float": "right"}}>
-  <Text sx={{"fontSize": "12px", "color": "black", "textAlign": "end"}}>
-  {`비밀번호를 잊어버리셨나요?`}
+  <Text sx={{"fontSize": "17px", "color": "black", "textAlign": "end"}}>
+  {`Login`}
 </Text>
 </Button>
+  <Container sx={{"height": "50px"}}/>
   <HStack>
   <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder"}}>
   {`회원가입`}
 </Text>
 </Button>
-  <Container sx={{"width": "130px"}}/>
+  <Container sx={{"width": "20px"}}/>
   <Button colorScheme="black">
   <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
-  {`로그인`}
+  {`ID찾기`}
+</Text>
+</Button>
+  <Container sx={{"width": "20px"}}/>
+  <Button colorScheme="black">
+  <Text sx={{"color": "black", "fontSize": "13px", "weight": "bolder", "textAlign": "end"}}>
+  {`비밀번호찾기`}
 </Text>
 </Button>
 </HStack>

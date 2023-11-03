@@ -44,12 +44,12 @@ def index():
             ),
         ),
         pc.vstack(
-            pc.container(height= '10px'),
+            pc.container(height= '5px'),
             pc.container(
                 pc.text('Create a picture with your story!',
                     style= {
                         "fontSize": "15px",
-                        "letterSpacing": "2px",
+                        "letterSpacing": "3.5px",
                         "color": 'black'
                     },
                     center_content =True,
@@ -68,9 +68,9 @@ def index():
             get_input_field('Lock','Password','password'),
             pc.button(
                 pc.text(
-                    '비밀번호를 잊어버리셨나요?',
+                    'Login',
                     style = {
-                        'fontSize':'12px',
+                        'fontSize':'17px',
                         'color':'black',
                         'textAlign':'end',
                     },
@@ -80,6 +80,7 @@ def index():
                 },
                 color_scheme = 'black'
             ),
+            pc.container(height='50px'),
             pc.hstack(
                 pc.button(
                     pc.text(
@@ -92,10 +93,23 @@ def index():
                     ),
                     color_scheme='black',
                 ),
-                pc.container(width='130px'),
+                pc.container(width='20px'),
                 pc.button(
                     pc.text(
-                        '로그인',
+                        'ID찾기',
+                        style={
+                            'color':'black',
+                            'fontSize':'13px',
+                            'weight':'bolder',
+                            'textAlign':'end',
+                        },
+                    ),
+                    color_scheme='black',
+                ),                 
+                pc.container(width='20px'),
+                pc.button(
+                    pc.text(
+                        '비밀번호찾기',
                         style={
                             'color':'black',
                             'fontSize':'13px',
@@ -111,7 +125,7 @@ def index():
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = 'rgba(255,255,255,0.8)',
+        bg = 'rgba(255,255,255,0.85)',
         borderRadius='20px',
         boxShadow='9px 9px 50px #ceddf5'
     )
