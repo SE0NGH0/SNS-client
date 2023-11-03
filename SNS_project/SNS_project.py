@@ -5,7 +5,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         pc.hstack(
             pc.icon(
                 tag=icon,
-                color='black',
+                color='green',
                 fontSize='12px',
             ),
             pc.input(
@@ -17,7 +17,7 @@ def get_input_field(icon: str, placeholder: str, _type: str):
                 type=_type,
             ),
         ),
-        borderBottom='0.3px solid purple',
+        borderBottom='0.3px solid green',
         width='300px',
         height='43px',
     )
@@ -28,37 +28,42 @@ def index():
         pc.vstack(
             pc.container(height= '75px'),
             pc.container(
-                pc.image(
-                    src="onestar1.ico",  # 이미지 파일의 경로를 지정합니다.
-                    alt="ONE STAR",  # 이미지의 대체 텍스트를 지정합니다.
-                    style={"width": "100px", "height": "100px"},  # 이미지 크기를 조정합니다.
-                ),
-                style={
-                    "width": "100%",  # 부모 컨테이너의 100% 너비 설정
-                    "display": "flex",
-                    "flex-direction": "column",  # 내부 컨테이너의 내용을 세로로 정렬
-                    "align-items": "center",  # 내부 컨테이너의 내용을 수직으로 가운데 정렬
-                    },
-                ),
-        ),
-        pc.vstack(
-            pc.container(height= '10px'),
-            pc.container(
                 pc.text(
-                    'ONESTARGRAM',
+                    'MOSAIC',
                     style= {
-                        "fontSize": "25px",
+                        "fontSize": "30px",
                         "fontWeight": "bolder",
                         "letterSpacing": "5px",
-                        "fontFamily": "Georgia, Serif",
-                        "background": "-webkit-linear-gradient(-45deg, #663399, #fa0000)",
+                        "fontFamily": "Open Sans,Sans-serif",
+                        "background": "-webkit-linear-gradient(-45deg, #035a8a, #078f15)",
                         "-webkit-background-clip": "text",
                         "color": "transparent",
                     },
                     center_content =True,
                 ),
             ),
-            pc.container(height='120px'),
+        ),
+        pc.vstack(
+            pc.container(height= '10px'),
+            pc.container(
+                pc.text('Create a picture with your story!',
+                    style= {
+                        "fontSize": "15px",
+                        "letterSpacing": "2px",
+                        "color": 'black'
+                    },
+                    center_content =True,
+                ),
+            ),
+            pc.container(
+                pc.container(height='30px'),
+                pc.image(
+                    src="mosaic.ico",
+                    alt="star",
+                    style={"width": "100px", "height": "100px"},
+                ),
+                center_content=True,
+            ),
             get_input_field('Email','Email',''),
             get_input_field('Lock','Password','password'),
             pc.button(
@@ -73,9 +78,8 @@ def index():
                 style = {
                     'float':'right',
                 },
-                color_scheme='black',
+                color_scheme = 'black'
             ),
-            pc.container(height='55px'),
             pc.hstack(
                 pc.button(
                     pc.text(
@@ -99,17 +103,17 @@ def index():
                             'textAlign':'end',
                         },
                     ),
-                    color_scheme='black',
-                )
+                    color_scheme='black', 
+                ),
             ),
         ),
         
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = 'rgba(255, 255, 255, 0.5)',
-        borderRadius='15px',
-        boxShadow='-11px 11px 50px #000000',
+        bg = 'rgba(255,255,255,0.8)',
+        borderRadius='20px',
+        boxShadow='9px 9px 50px #ceddf5'
     )
 
     _main = pc.container(
@@ -119,7 +123,11 @@ def index():
         maxWidth='auto',
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
-        bg='linear-gradient(to bottom, #663399, #FFA500)', #배경 색상
+        style={
+        'background-image': "url('mosaic.jpg')",
+        'background-size': 'cover',  # 배경 이미지 크기 조절
+        'background-repeat': 'no-repeat',  # 배경 이미지 반복 제거
+        },
     )
     return _main
 
