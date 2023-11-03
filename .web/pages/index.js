@@ -108,7 +108,7 @@ export default function Component() {
 </Container>
   <Container centerContent={true}>
   <Container sx={{"height": "30px"}}/>
-  <Image src="mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
+  <Image src="Mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
 </Container>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>

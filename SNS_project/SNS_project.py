@@ -58,7 +58,7 @@ def index():
             pc.container(
                 pc.container(height='30px'),
                 pc.image(
-                    src="mosaic.ico",
+                    src="Mosaic.ico",
                     alt="star",
                     style={"width": "100px", "height": "100px"},
                 ),
