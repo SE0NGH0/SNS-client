@@ -22,6 +22,21 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         height='43px',
     )
 
+import requests
+
+url = 'http://163.152.224.167:3000/users/2'
+
+try:
+    response = requests.get(url)
+
+    # HTTP 상태 코드를 확인하여 요청이 성공적으로 이루어졌는지 확인
+    if response.status_code == 200:
+        data = response.json()  # JSON 데이터를 파싱
+        print(data)
+    else:
+        print(f'HTTP 오류: {response.status_code}')
+except requests.exceptions.RequestException as e:
+    print(f'요청 중 오류 발생: {e}')
 
 def index():
     login_container = pc.container(
