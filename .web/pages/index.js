@@ -8,7 +8,7 @@ import NextHead from "next/head"
 
 
 export default function Component() {
-  const [default_state, setDefault_state] = useState({"events": [{"name": "default_state.hydrate"}], "files": []})
+  const [state, setState] = useState({"is_hydrated": false, "events": [{"name": "state.hydrate"}], "files": []})
   const [result, setResult] = useState({"state": null, "events": [], "final": true, "processing": false})
   const [notConnected, setNotConnected] = useState(false)
   const router = useRouter()
@@ -20,14 +20,14 @@ export default function Component() {
   // Function to add new events to the event queue.
   const Event = (events, _e) => {
       preventDefault(_e);
-      setDefault_state(state => ({
+      setState(state => ({
         ...state,
         events: [...state.events, ...events],
       }))
   }
 
   // Function to add new files to be uploaded.
-  const File = files => setDefault_state(state => ({
+  const File = files => setState(state => ({
     ...state,
     files,
   }))
@@ -41,18 +41,18 @@ export default function Component() {
 
     // Initialize the websocket connection.
     if (!socket.current) {
-      connect(socket, default_state, setDefault_state, result, setResult, router, ['websocket', 'polling'], setNotConnected)
+      connect(socket, state, setState, result, setResult, router, ['websocket', 'polling'], setNotConnected)
     }
 
     // If we are not processing an event, process the next event.
     if (!result.processing) {
-      processEvent(default_state, setDefault_state, result, setResult, router, socket.current)
+      processEvent(state, setState, result, setResult, router, socket.current)
     }
 
     // If there is a new result, update the state.
     if (result.state != null) {
       // Apply the new result to the state and the new events to the queue.
-      setDefault_state(state => ({
+      setState(state => ({
         ...result.state,
         events: [...state.events, ...result.events],
       }))
@@ -66,7 +66,7 @@ export default function Component() {
       }))
 
       // Process the next event.
-      processEvent(default_state, setDefault_state, result, setResult, router, socket.current)
+      processEvent(state, setState, result, setResult, router, socket.current)
     }
   })
 
@@ -79,7 +79,7 @@ export default function Component() {
 
   // Route after the initial page hydration.
   useEffect(() => {
-    const change_complete = () => Event([E('default_state.hydrate', {})])
+    const change_complete = () => Event([E('state.hydrate', {})])
     router.events.on('routeChangeComplete', change_complete)
     return () => {
       router.events.off('routeChangeComplete', change_complete)
@@ -90,7 +90,7 @@ export default function Component() {
   return (
   <Fragment><Fragment>
   <Container centerContent={true} sx={{"background-image": "url('mosaic.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.85)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.9)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
@@ -108,7 +108,7 @@ export default function Component() {
 </Container>
   <Container centerContent={true}>
   <Container sx={{"height": "30px"}}/>
-  <Image src="Mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
+  <Image src="mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
 </Container>
   <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
   <HStack>
@@ -122,9 +122,10 @@ export default function Component() {
   <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
 </HStack>
 </Container>
-  <Button colorScheme="black" sx={{"float": "right"}}>
-  <Text sx={{"fontSize": "17px", "color": "black", "textAlign": "end"}}>
-  {`Login`}
+  <Container sx={{"height": "20px"}}/>
+  <Button colorScheme="black" onClick={_e => Event([E("state.user_info", {})], _e)} sx={{"float": "right"}}>
+  <Text sx={{"fontSize": "20px", "color": "black", "textAlign": "end"}}>
+  {`Log In`}
 </Text>
 </Button>
   <Container sx={{"height": "50px"}}/>

@@ -21,22 +21,17 @@ def get_input_field(icon: str, placeholder: str, _type: str):
         width='300px',
         height='43px',
     )
-
+    
 import requests
 
-url = 'http://163.152.224.167:3000/users/2'
+class State(pc.State):
+    def user_info(self):
+        url = 'http://163.152.224.167:3000/users/1'
+        user_id = requests.get(url).json()['email']
+        user_password=requests.get(url).json()['password']
+        print(user_id)
+        print(user_password)
 
-try:
-    response = requests.get(url)
-
-    # HTTP 상태 코드를 확인하여 요청이 성공적으로 이루어졌는지 확인
-    if response.status_code == 200:
-        data = response.json()  # JSON 데이터를 파싱
-        print(data)
-    else:
-        print(f'HTTP 오류: {response.status_code}')
-except requests.exceptions.RequestException as e:
-    print(f'요청 중 오류 발생: {e}')
 
 def index():
     login_container = pc.container(
@@ -73,7 +68,7 @@ def index():
             pc.container(
                 pc.container(height='30px'),
                 pc.image(
-                    src="Mosaic.ico",
+                    src="mosaic.ico",
                     alt="star",
                     style={"width": "100px", "height": "100px"},
                 ),
@@ -81,11 +76,12 @@ def index():
             ),
             get_input_field('Email','Email',''),
             get_input_field('Lock','Password','password'),
+            pc.container(height = '20px'),
             pc.button(
                 pc.text(
-                    'Login',
+                    'Log In',
                     style = {
-                        'fontSize':'17px',
+                        'fontSize':'20px',
                         'color':'black',
                         'textAlign':'end',
                     },
@@ -93,7 +89,8 @@ def index():
                 style = {
                     'float':'right',
                 },
-                color_scheme = 'black'
+                color_scheme = 'black',
+                on_click = State.user_info,
             ),
             pc.container(height='50px'),
             pc.hstack(
@@ -140,11 +137,11 @@ def index():
         width ='500px',
         height='75vh',
         center_content=True,
-        bg = 'rgba(255,255,255,0.85)',
+        bg = 'rgba(255,255,255,0.9)',
         borderRadius='20px',
         boxShadow='9px 9px 50px #ceddf5'
     )
-
+    
     _main = pc.container(
         login_container,
         center_content=True,
@@ -161,6 +158,6 @@ def index():
     return _main
 
 
-app = pc.App()
+app = pc.App(state=State)
 app.add_page(index)
 app.compile()
