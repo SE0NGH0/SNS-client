@@ -89,20 +89,20 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"background-image": "url('mosaic.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
-  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.9)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
+  <Container centerContent={true} sx={{"background-image": "url('aurora.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
+  <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.7)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
-  <Text sx={{"fontSize": "30px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Open Sans,Sans-serif", "background": "-webkit-linear-gradient(-45deg, #035a8a, #078f15)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
-  {`MOSAIC`}
+  <Text sx={{"fontSize": "40px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Open Sans,Sans-serif", "background": "-webkit-linear-gradient(-45deg, #e04a3f, #4e8be6)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
+  {`Aurora`}
 </Text>
 </Container>
 </VStack>
   <VStack>
   <Container sx={{"height": "5px"}}/>
   <Container>
-  <Text sx={{"fontSize": "15px", "letterSpacing": "3.5px", "color": "black", "centerContent": true}}>
+  <Text sx={{"fontSize": "15px", "letterSpacing": "3.5px", "color": "black", "font-family": "Helvetica, Sans-serif", "centerContent": true}}>
   {`Create a picture with your story!`}
 </Text>
 </Container>
@@ -110,22 +110,23 @@ export default function Component() {
   <Container sx={{"height": "30px"}}/>
   <Image src="mosaic.ico" sx={{"width": "100px", "height": "100px", "alt": "star"}}/>
 </Container>
-  <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
+  <Container sx={{"height": "50px"}}/>
+  <Container sx={{"borderBottom": "0.2px solid black", "width": "300px", "height": "43px"}}>
   <HStack>
-  <EmailIcon sx={{"color": "green", "fontSize": "12px"}}/>
+  <EmailIcon sx={{"color": "black", "fontSize": "12px"}}/>
   <Input focusBorderColor="black" placeholder="Email" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": ""}} type="text"/>
 </HStack>
 </Container>
-  <Container sx={{"borderBottom": "0.3px solid green", "width": "300px", "height": "43px"}}>
+  <Container sx={{"borderBottom": "0.2px solid black", "width": "300px", "height": "43px"}}>
   <HStack>
-  <LockIcon sx={{"color": "green", "fontSize": "12px"}}/>
+  <LockIcon sx={{"color": "black", "fontSize": "12px"}}/>
   <Input focusBorderColor="black" placeholder="Password" sx={{"border": "0px", "fontWeight": "semibold", "fontSize": "13px", "type": "password"}} type="text"/>
 </HStack>
 </Container>
   <Container sx={{"height": "20px"}}/>
   <Button colorScheme="black" onClick={_e => Event([E("state.user_info", {})], _e)} sx={{"float": "right"}}>
-  <Text sx={{"fontSize": "20px", "color": "black", "textAlign": "end"}}>
-  {`Log In`}
+  <Text sx={{"fontSize": "22px", "color": "green", "textAlign": "end"}}>
+  {`Log in`}
 </Text>
 </Button>
   <Container sx={{"height": "50px"}}/>
