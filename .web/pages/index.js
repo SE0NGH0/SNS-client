@@ -89,12 +89,12 @@ export default function Component() {
 
   return (
   <Fragment><Fragment>
-  <Container centerContent={true} sx={{"background-image": "url('aurora.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
+  <Container centerContent={true} sx={{"background-image": "url('aurora2.jpg')", "background-size": "cover", "background-repeat": "no-repeat", "justifyContent": "center", "maxWidth": "auto", "height": "100vh"}}>
   <Container centerContent={true} sx={{"width": "500px", "height": "75vh", "bg": "rgba(255,255,255,0.7)", "borderRadius": "20px", "boxShadow": "9px 9px 50px #ceddf5"}}>
   <VStack>
   <Container sx={{"height": "75px"}}/>
   <Container>
-  <Text sx={{"fontSize": "40px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Open Sans,Sans-serif", "background": "-webkit-linear-gradient(-45deg, #e04a3f, #4e8be6)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
+  <Text sx={{"fontSize": "40px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Open Sans,Sans-serif", "background": "-webkit-linear-gradient(-45deg, #4e8be6, #309e0e)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
   {`Aurora`}
 </Text>
 </Container>
@@ -121,8 +121,8 @@ export default function Component() {
 </HStack>
   <Container sx={{"height": "20px"}}/>
   <Button colorScheme="black" onClick={_e => Event([E("state.add_info", {})], _e)} onMouseUp={_e => Event([E("state.clear_input", {})], _e)} sx={{"float": "right"}}>
-  <Text sx={{"fontSize": "22px", "color": "green", "textAlign": "end"}}>
-  {`로그인`}
+  <Text sx={{"fontSize": "22px", "fontWeight": "bolder", "letterSpacing": "5px", "fontFamily": "Open Sans,Sans-serif", "background": "-webkit-linear-gradient(-45deg, #309e0e, #4e8be6)", "-webkit-background-clip": "text", "color": "transparent", "centerContent": true}}>
+  {`Log in`}
 </Text>
 </Button>
   <Container sx={{"height": "50px"}}/>

@@ -34,7 +34,7 @@ def index():
                         "fontWeight": "bolder",
                         "letterSpacing": "5px",
                         "fontFamily": "Open Sans,Sans-serif",
-                        "background": "-webkit-linear-gradient(-45deg, #e04a3f, #4e8be6)",
+                        "background": "-webkit-linear-gradient(-45deg, #4e8be6, #309e0e)",
                         "-webkit-background-clip": "text",
                         "color": "transparent",
                     },
@@ -96,12 +96,17 @@ def index():
             pc.container(height = '20px'),
             pc.button(
                 pc.text(
-                    '로그인',
-                    style = {
-                        'fontSize':'22px',
-                        'color':'green',
-                        'textAlign':'end',
+                    'Log in',
+                    style= {
+                        "fontSize": "22px",
+                        "fontWeight": "bolder",
+                        "letterSpacing": "5px",
+                        "fontFamily": "Open Sans,Sans-serif",
+                        "background": "-webkit-linear-gradient(-45deg, #309e0e, #4e8be6)",
+                        "-webkit-background-clip": "text",
+                        "color": "transparent",
                     },
+                    center_content =True,
                 ),
                 style = {
                     'float':'right',
@@ -168,7 +173,7 @@ def index():
         #width='80vh' 가로 길이
         height='100vh', #세로 길이
         style={
-        'background-image': "url('aurora.jpg')",
+        'background-image': "url('aurora2.jpg')",
         'background-size': 'cover',  # 배경 이미지 크기 조절
         'background-repeat': 'no-repeat',  # 배경 이미지 반복 제거
         },
