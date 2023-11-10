@@ -103,7 +103,7 @@ export default function Component() {
   <Container sx={{"height": "5px"}}/>
   <Container>
   <Text sx={{"fontSize": "15px", "letterSpacing": "3.5px", "color": "black", "font-family": "Helvetica, Sans-serif", "centerContent": true}}>
-  {`Create a picture with your story!`}
+  {`Create and display your dynamic stories!`}
 </Text>
 </Container>
   <Container centerContent={true}>

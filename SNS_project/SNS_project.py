@@ -45,7 +45,7 @@ def index():
         pc.vstack(
             pc.container(height= '5px'),
             pc.container(
-                pc.text('Create a picture with your story!',
+                pc.text('Create and display your dynamic stories!',
                     style= {
                         "fontSize": "15px",
                         "letterSpacing": "3.5px",
